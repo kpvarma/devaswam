@@ -1,0 +1,40 @@
+/* Breadcrumb Classes */
+.breadcrumb {
+  font-size: 12px;
+  color: #4B4B4B;
+  letter-spacing: 1px; }
+
+.breadcrumb a {
+  color: #4086a3;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold; }
+
+
+
+
+
+
+
+
+
+/* Display Time Classes */
+
+.display-time-in-ago { color: darkred }
+.time-ago { color: #898989;}
+.time-ago-white { color: #fff;}
+
+
+.row-fluid-padding-more {
+  padding: 5px 0px 5px 0px;
+}
+
+.span-custom-min-height {
+  min-height: 5px !important;
+}
+
+
+
+
+

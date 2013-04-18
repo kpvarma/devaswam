@@ -1,0 +1,31 @@
+<h1>Listing vazhipadu_bookings</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Vazhipadu</th>
+    <th>Temple</th>
+    <th>Devan</th>
+    <th>Date of vazhipadu</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vazhipadu_bookings.each do |vazhipadu_booking| %>
+  <tr>
+    <td><%= vazhipadu_booking.user %></td>
+    <td><%= vazhipadu_booking.vazhipadu %></td>
+    <td><%= vazhipadu_booking.temple %></td>
+    <td><%= vazhipadu_booking.devan %></td>
+    <td><%= vazhipadu_booking.date_of_vazhipadu %></td>
+    <td><%= link_to 'Show', vazhipadu_booking %></td>
+    <td><%= link_to 'Edit', edit_vazhipadu_booking_path(vazhipadu_booking) %></td>
+    <td><%= link_to 'Destroy', vazhipadu_booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vazhipadu booking', new_vazhipadu_booking_path %>

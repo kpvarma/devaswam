@@ -1,0 +1,22 @@
+
+<%# Displays list of temples %>
+<div id="div_temple_items">
+	<% @temples.sort! { |a,b| a.name.downcase <=> b.name.downcase }.each do |temple| %>
+		<div id="div_temple_item_<%= temple.id %>">
+			<%= render :partial=>"item", :locals=>{:temple=>temple} %>
+		</div>
+	<% end %>
+	<% if @temples.blank? %>
+		<div class="mquiq-box padding-10" style="height:200px;">
+			No results found.
+		</div>
+	<% end %>
+</div>
+<div class="cl"></div>
+
+<% if @temples.any? %>
+   <%= content_tag :div, :class=>"pull-right" do %>
+     <%= paginate @temples, :remote => true, :theme => 'twitter-bootstrap' %>
+   <% end %>
+<% end %>
+<div class="cl"></div>

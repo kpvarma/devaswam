@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @vazhipadu.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @vazhipadu.description %>
+</p>
+
+<p>
+  <b>Temple:</b>
+  <%= @vazhipadu.temple %>
+</p>
+
+<p>
+  <b>Devan:</b>
+  <%= @vazhipadu.devan %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%= @vazhipadu.rate %>
+</p>
+
+
+<%= link_to 'Edit', edit_vazhipadu_path(@vazhipadu) %> |
+<%= link_to 'Back', vazhipadus_path %>

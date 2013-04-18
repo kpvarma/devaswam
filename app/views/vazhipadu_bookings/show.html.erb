@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @vazhipadu_booking.user %>
+</p>
+
+<p>
+  <b>Vazhipadu:</b>
+  <%= @vazhipadu_booking.vazhipadu %>
+</p>
+
+<p>
+  <b>Temple:</b>
+  <%= @vazhipadu_booking.temple %>
+</p>
+
+<p>
+  <b>Devan:</b>
+  <%= @vazhipadu_booking.devan %>
+</p>
+
+<p>
+  <b>Date of vazhipadu:</b>
+  <%= @vazhipadu_booking.date_of_vazhipadu %>
+</p>
+
+
+<%= link_to 'Edit', edit_vazhipadu_booking_path(@vazhipadu_booking) %> |
+<%= link_to 'Back', vazhipadu_bookings_path %>

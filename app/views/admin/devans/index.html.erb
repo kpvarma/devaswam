@@ -1,0 +1,27 @@
+<h1>Listing devans</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Temple</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @devans.each do |devan| %>
+  <tr>
+    <td><%= devan.name %></td>
+    <td><%= devan.description %></td>
+    <td><%= devan.temple %></td>
+    <td><%= link_to 'Show', devan %></td>
+    <td><%= link_to 'Edit', edit_devan_path(devan) %></td>
+    <td><%= link_to 'Destroy', devan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Devan', new_devan_path %>

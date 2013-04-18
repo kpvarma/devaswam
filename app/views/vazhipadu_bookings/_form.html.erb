@@ -1,0 +1,37 @@
+<%= form_for(@vazhipadu_booking) do |f| %>
+  <% if @vazhipadu_booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vazhipadu_booking.errors.count, "error") %> prohibited this vazhipadu_booking from being saved:</h2>
+
+      <ul>
+      <% @vazhipadu_booking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :vazhipadu %><br />
+    <%= f.text_field :vazhipadu %>
+  </div>
+  <div class="field">
+    <%= f.label :temple %><br />
+    <%= f.text_field :temple %>
+  </div>
+  <div class="field">
+    <%= f.label :devan %><br />
+    <%= f.text_field :devan %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_vazhipadu %><br />
+    <%= f.date_select :date_of_vazhipadu %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

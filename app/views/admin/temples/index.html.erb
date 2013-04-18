@@ -1,0 +1,32 @@
+
+<%# Displays to Manage the temples %>
+<div class="row-fluid padding-top-10">
+	<div class="font-size-22 pull-left">Manage Temples</div>
+	<div class="pull-right"><%= link_to "New Temple", new_admin_temple_path, :class=>"btn btn-primary btn-mini" %></div>
+	<div class="cl-20"></div>
+	
+</div>
+<%# Renders a partial to display all the temples %>
+<div class="row-fluid">
+	<div id="div_temple_list" class="span6">
+		<%= render :partial=>"index" %>
+	</div>
+
+	<div id="div_temple_details" class="span6">
+		<% case	params[:action] %>
+		<% when "new", "edit", "show" %>
+			<%= render :partial=>params[:action] %>
+		<% when "index" %>	
+			<% if @temples.empty? %>
+				<%= render :partial=>"summary" %>
+			<% else %>
+				<%= render :partial=>"show" %>	
+			<% end %>
+		<% else %>
+			<%= render :partial=>"summary" %>	
+		<% end %>
+	</div>
+	
+</div>
+	
+

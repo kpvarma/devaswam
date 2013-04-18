@@ -1,0 +1,31 @@
+<h1>Listing vazhipadus</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Temple</th>
+    <th>Devan</th>
+    <th>Rate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vazhipadus.each do |vazhipadu| %>
+  <tr>
+    <td><%= vazhipadu.name %></td>
+    <td><%= vazhipadu.description %></td>
+    <td><%= vazhipadu.temple %></td>
+    <td><%= vazhipadu.devan %></td>
+    <td><%= vazhipadu.rate %></td>
+    <td><%= link_to 'Show', vazhipadu %></td>
+    <td><%= link_to 'Edit', edit_vazhipadu_path(vazhipadu) %></td>
+    <td><%= link_to 'Destroy', vazhipadu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vazhipadu', new_vazhipadu_path %>

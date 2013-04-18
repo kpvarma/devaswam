@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @temple.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @temple.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_temple_path(@temple) %> |
+<%= link_to 'Back', temples_path %>

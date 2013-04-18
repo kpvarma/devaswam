@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @devan.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @devan.description %>
+</p>
+
+<p>
+  <b>Temple:</b>
+  <%= @devan.temple %>
+</p>
+
+
+<%= link_to 'Edit', edit_devan_path(@devan) %> |
+<%= link_to 'Back', devans_path %>
